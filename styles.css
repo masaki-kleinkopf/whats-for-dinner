@@ -12,7 +12,7 @@ red - #ee5253
 
 body{
   background-image: url(./assets/burger-friends.jpg);
-   background-size: 100%;
+   background-size: 1500px;
    font-family: 'Roboto', sans-serif
 }
 
@@ -27,14 +27,10 @@ article {
   margin-right: 120px;
   margin-left: 60px;
   padding:40px;
+  flex: 1;
 }
 
-@media (max-width: 800px) {
-  section {
-    display:flex;
-    flex-direction: column;
-  }
-}
+
 
 .dishes{
   font-size: 2.2vh;
@@ -43,7 +39,13 @@ article {
 .cook-pot{
   height:45%;
   width:45%;
+
+}
+
+.cook-pot-animate{
   animation: load3 1.4s infinite linear;
+  animation-duration: 1.4s;
+  animation-fill-mode: forwards;
 }
 
 .cookpot-container {
@@ -71,6 +73,19 @@ section{
   display:flex;
   flex-direction: row;
   margin:6%
+}
+
+@media (max-width: 800px) {
+  section {
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: stretch;
+  }
+
+  article{
+    height: 1vh;
+  }
 }
 
 input{
@@ -133,30 +148,6 @@ input{
 
 
 
-.cook-pot:before {
-  width: 40%;
-  height: 40%;
-  background: #ffffff;
-  border-radius: 100% 0 0 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '';
-}
-.cook-pot:after {
-  background: #0dc5c1;
-  width: 75%;
-  height: 75%;
-  border-radius: 50%;
-  content: '';
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
 @keyframes load3 {
   0% {
     transform: rotate(0deg);
@@ -164,4 +155,8 @@ input{
   100% {
     transform: rotate(360deg);
   }
+}
+
+.recipe-container{
+  text-align: center;
 }
