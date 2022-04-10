@@ -22,6 +22,6 @@ What's for dinner? The ultimate question. This app helps users choose a recipe a
 - `cd` into the project
 - Read this README thoroughly, then begin working!
 
-##Contributor 
+## Contributor 
 
 * [Masaki Kleinkopf](https://github.com/masaki-kleinkopf/ "Masaki Kleinkopf")
