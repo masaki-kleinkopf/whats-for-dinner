@@ -9,7 +9,7 @@ What's for dinner? The ultimate question. This app helps users choose a recipe a
 * Show random side, main dish, or dessert.
 * CSS - buttons change on hover, spinning load animation, and responsive design.
 
-![First gif](gif1.gif)
+![First gif](https://github.com/masaki-kleinkopf/whats-for-dinner/blob/1541e187c867d96c1fcba17d9f1e122e8b6c5e54/README-gifs/gif1.gif)
 
 ## Setup
 
