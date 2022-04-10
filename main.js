@@ -1,7 +1,8 @@
 //query selectors
-var cookButton = document.querySelector('.lets-cook')
-var showFoodArea = document.querySelector('.cookpot-container')
-
+var cookButton = document.querySelector('.lets-cook');
+var showFoodArea = document.querySelector('.cookpot-container');
+var cookpot = document.querySelector('.cook-pot');
+var recipeContainer = document.querySelector('.recipe-container');
 
 //DATA MODEL
 var sides = ['Miso Glazed Carrots',
@@ -47,20 +48,26 @@ var desserts = ['Apple Pie',
 'Eclairs'];
 
 //event listeners
-cookButton.addEventListener('click', randomFood )
+cookButton.addEventListener('click', randomFood);
 //event handlers
 
 function randomFood(){
   var allFoods ={sides:sides,
     mainDishes:mainDishes,
     desserts:desserts};
-
   selectedBtn = document.querySelector('input[name="radio-btn"]:checked').value;
-  randomItem(allFoods[selectedBtn])
-}
+  randomItem(allFoods[selectedBtn]);
+  animate();
+};
+
+function animate(){
+  cookpot.classList.remove('cook-pot-animate');
+  void cookpot.offsetWidth;
+  cookpot.classList.add('cook-pot-animate');
+};
 
 function randomItem(food){
-  var randomItem = food[Math.floor(Math.random()*food.length)]
-  showFoodArea.innerHTML= `<h4> You should make </h4>
-                            <h2>${randomItem}</h2>`
-  }
+  var randomItem = food[Math.floor(Math.random()*food.length)];
+  recipeContainer.innerHTML= `<div class = "added-text faded-out"><h4> You should make </h4>
+                            <h2>${randomItem}</h2></div>`;
+};

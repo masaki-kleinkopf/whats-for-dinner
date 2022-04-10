@@ -10,158 +10,166 @@ red - #ee5253
 */
 
 
-body{
-  background-image: url(./assets/burger-friends.jpg);
-   background-size: 100%;
-   font-family: 'Roboto', sans-serif
+body {
+    background-image: url(./assets/burger-friends.jpg);
+    background-size: 1500px;
+    font-family: 'Roboto', sans-serif
 }
 
 article {
+    justify-content: space-evenly;
+    background:rgba(225,225,225,.9);
+    height:37.5vh;
+    width:52vh;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-right: 120px;
+    margin-left: 60px;
+    padding:40px;
+    flex: 1;
+}
 
-  justify-content: space-evenly;
-  background:rgba(225,225,225,.9);
-  height:37.5vh;
-  width:52vh;
-  margin-top: 80px;
-  margin-bottom: 80px;
-  margin-right: 120px;
-  margin-left: 60px;
-  padding:40px;
+header{
+    background-color:#0fb9b1;
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    height:10%;
+    position:fixed;
+    top:0;
+    left:0;
+    padding-left:1%;
+    padding-right:5%;
+    font-size: 2.2vh;
+}
+
+section {
+    display:flex;
+    flex-direction: row;
+    margin:6%
 }
 
 @media (max-width: 800px) {
   section {
-    display:flex;
-    flex-direction: column;
+      display:flex;
+      flex-direction: column;
+      justify-content:space-around;
+      align-items: stretch;
+  }
+
+  article {
+      height: 1vh;
   }
 }
 
-.dishes{
-  font-size: 2.2vh;
+input {
+    margin-top: -1px;
+    vertical-align: middle;
+    margin:10px;
 }
 
-.cook-pot{
-  height:45%;
-  width:45%;
-  animation: load3 1.4s infinite linear;
+.dishes {
+    font-size: 2.2vh;
+}
+
+.cook-pot {
+    height:45%;
+    width:45%;
+}
+
+.cook-pot-animate {
+    animation: spin 2.0s forwards;
 }
 
 .cookpot-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-header{
-  background-color:#0fb9b1;
-  display:flex;
-  justify-content: space-between;
-  width:100%;
-  height:10%;
-  position:fixed;
-  top:0;
-  left:0;
-  padding-left:1%;
-  padding-right:5%;
-  font-size: 2.2vh;
-}
-
-section{
-  display:flex;
-  flex-direction: row;
-  margin:6%
-}
-
-input{
-  margin-top: -1px;
-  vertical-align: middle;
-  margin:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .add-a-recipe {
-  height:auto;
-  width:auto;
-
-  padding:10px;
-  margin:20px;
-  margin-right: 35px;
-
-  text-align: center;
-  border-radius:5%;
-  border:none;
-  font-size: 1.7vh;
+    height:auto;
+    width:auto;
+    padding:10px;
+    margin:20px;
+    margin-right: 35px;
+    text-align: center;
+    border-radius:5%;
+    border:none;
+    font-size: 1.7vh;
 }
 
 .add-a-recipe:hover {
-  color: rgba(255, 255, 255, 1);
-  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
-  background-color:#663399;
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 13px rgba(145, 92, 182, .4);
+    background-color:#663399;
 }
 
 
-span{
-  color:red
+span {
+    color:red
 }
 
-.lets-cook{
-  background-color:#0fb9b1;
-  height:12%;
-  width:35%;
-  padding:8px;
-  margin:6px;
-  text-align: center;
-  border-width: thin;
-  border-color: blue;
-  border-radius:5%;
-  margin:5%;
-  font-size: 1.5vh;
+.lets-cook {
+    background-color:#0fb9b1;
+    height:12%;
+    width:35%;
+    padding:8px;
+    margin:6px;
+    text-align: center;
+    border-width: thin;
+    border-color: blue;
+    border-radius:5%;
+    margin:5%;
+    font-size: 1.5vh;
 }
 
 .lets-cook:hover {
-  color: rgba(255, 255, 255, 1);
-  box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
 }
 
-h4{
-  font-style: italic;
+h4 {
+    font-style: italic;
 }
 
 input{
-  width:2vh;
+    width:2vh;
 }
 
-
-
-.cook-pot:before {
-  width: 40%;
-  height: 40%;
-  background: #ffffff;
-  border-radius: 100% 0 0 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '';
-}
-.cook-pot:after {
-  background: #0dc5c1;
-  width: 75%;
-  height: 75%;
-  border-radius: 50%;
-  content: '';
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-@keyframes load3 {
+@keyframes spin {
   0% {
     transform: rotate(0deg);
+    opacity:1;
   }
   100% {
     transform: rotate(360deg);
+    opacity: 0;
   }
+}
+
+.recipe-container{
+  text-align: center;
+}
+
+.added-text{
+
+  animation: fade-in 2.6s forwards;
+
+}
+
+.faded-out{
+  opacity:0;
+}
+
+@keyframes fade-in {
+	from {
+		transform: scale(.8);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
 }
