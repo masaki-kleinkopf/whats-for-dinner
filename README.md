@@ -1,6 +1,5 @@
 # What's for Dinner?
 
-[Link to repo](https://github.com/masaki-kleinkopf/whats-for-dinner)
 
 ## Overview
 
