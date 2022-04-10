@@ -1,5 +1,7 @@
 # What's for Dinner?
 
+[Link to repo](https://github.com/masaki-kleinkopf/whats-for-dinner)
+
 ## Overview
 
 What's for dinner? The ultimate question. This app helps users choose a recipe and put together meals. 
